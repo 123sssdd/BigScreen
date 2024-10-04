@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>可视化大屏</title>
+	<link rel="stylesheet" href="icon/iconfont.css">
+	<script src="js/jquery.min.js"></script>
+	<script src="js/echarts.min.js"></script>
+
+
+
+</head>
+
+<body>
+	<div class="container-header">
+		<ul class="nowTime">
+			<li></li>
+			<li></li>
+		</ul>
+		<div class="buttonarea">
+			<button id="button1">生产条件评估</button>
+		</div>
+		<div class="location">
+			<i class="icon iconfont icon-buoumaotubiao23"></i>
+			<span class="areaName"></span>
+		</div>
+		<h3>卜卜生机🥕收获机</h3>
+	</div>
+	<div class="container-content">
+		<div class="top">
+			<div class="count-base" style="width: 97.5%;display: flex;align-items:center ">
+
+
+
+				<div class="main_top_middle_num_title">胡萝卜收获数量</div>
+				<div class="main_top_middle_num">
+					<div class="main_top_middle_num_list">
+						<img src="./images/center_num.png">
+						<p class="main_top_middle_num_list6">0</p>
+					</div>
+					<div class="main_top_middle_num_list">
+						<img src="./images/center_num.png">
+						<p class="main_top_middle_num_list5">0</p>
+					</div>
+					<div class="main_top_middle_num_list">
+						<img src="./images/center_num.png">
+						<p class="main_top_middle_num_list4">0</p>
+					</div>
+					<div class="main_top_middle_num_list">
+						<img src="./images/center_num.png">
+						<p class="main_top_middle_num_list3">0</p>
+					</div>
+					<div class="main_top_middle_num_list">
+						<img src="./images/center_num.png">
+						<p class="main_top_middle_num_list2">0</p>
+					</div>
+					<div class="main_top_middle_num_list">
+						<img src="./images/center_num.png">
+						<p class="main_top_middle_num_list1">0</p>
+					</div>
+				</div>
+
+				<ul class="zpsl-box">
+					<li>
+						<span>收获数量</span>
+						<span>1245</span>
+					</li>
+				</ul>
+
+
+				<span class="left-top"></span>
+				<span class="right-top"></span>
+				<span class="left-bottom"></span>
+				<span class="right-bottom"></span>
+			</div>
+
+
+		</div>
+
+
+		<div class="bottom">
+			<div class="count-topic e1">
+				<div class="com-count-title">生产指数</div>
+				<div class="completion">
+					<div class="completion-content">
+						<div class="rate">
+							<h5><span>电量</span></h5>
+							<p>67%</p>
+						</div>
+					</div>
+				</div>
+				<div class="air">
+					<div class="air-title title numfont">Voltage</div>
+					<div class="air-relative">
+						<div class="air-val">
+							<span class="air-icon"></span>
+							<div class="numfont">
+								<p class="hpa-rel"></p>
+								<p class="hpa-nam">Relative pressure</p>
+							</div>
+						</div>
+						<div class="gray">
+
+						</div>
+						<div class="light">
+
+						</div>
+						<div class="unit"></div>
+					</div>
+					<div class="air-absolutely">
+						<div class="air-val">
+							<span class="air-icon"></span>
+							<div class="numfont">
+								<p class="hpa-abs"></p>
+								<p class="hpa-nam">Absolute pressure</p>
+							</div>
+						</div>
+						<div class="gray">
+
+						</div>
+						<div class="light">
+
+						</div>
+						<div class="unit"></div>
+					</div>
+				</div>
+				<span class="left-top"></span>
+				<span class="right-top"></span>
+				<span class="left-bottom"></span>
+				<span class="right-bottom"></span>
+
+			</div>
+
+		</div>
+
+		<div class="bottom">
+			<div class="count-topic e1">
+				<div class="com-count-title">生产指数</div>
+				<div class="container">
+					<div class="container-top">
+						<div class="module">
+							<h3>装袋步进</h3>
+							<div class="work-status-light" id="work-status1"></div>
+							<div class="idle-status-light" id="idle-status1"></div>
+						</div>
+						<div class="module">
+							<h3>无刷切割</h3>
+							<div class="work-status-light" id="work-status2"></div>
+							<div class="idle-status-light" id="idle-status2"></div>
+						</div>
+						<div class="module">
+							<h3>加热条</h3>
+							<div class="work-status-light" id="work-status3"></div>
+							<div class="idle-status-light" id="idle-status3"></div>
+						</div>
+						<div class="module">
+							<h3>总电源</h3>
+							<div class="work-status-light" id="work-status4"></div>
+							<div class="idle-status-light" id="idle-status4"></div>
+						</div>
+					</div>
+					<div class="container-mid">
+						<div class="module">
+							<h3>传送带</h3>
+							<div class="work-status-light" id="work-status5"></div>
+							<div class="idle-status-light" id="idle-status5"></div>
+						</div>
+						<div class="module">
+							<h3>主控电路</h3>
+							<div class="work-status-light" id="work-status6"></div>
+							<div class="idle-status-light" id="idle-status6"></div>
+						</div>
+						<div class="module">
+						<h3>扶缨器</h3>
+						<div class="work-status-light" id="work-status7"></div>
+						<div class="idle-status-light" id="idle-status7"></div>
+					</div>
+				</div>
+			</div>
+			<span class="left-top"></span>
+			<span class="right-top"></span>
+			<span class="left-bottom"></span>
+			<span class="right-bottom"></span>
+
+		</div>
+
+	</div>
+	<div class="clearfix"></div>
+	</div>
+
+	<script type="text/javascript">
+		//根据不同的分辨率调用不同的css和js
+		if (window.screen.width >= 1600) {
+			document.write("<link href='css/test-1920.css' rel='stylesheet' type='text/css'>");
+
+			document.writeln("<script type=\"text/javascript\" src=\"js/test-1920.js\"><\/script>");
+		}
+		else if (window.screen.width < 1600 && window.screen.width >= 1280) {
+			document.write("<link href='css/test-1280.css' rel='stylesheet' type='text/css'>");
+
+			document.writeln("<script type=\"text/javascript\" src=\"js/carrot-1280.js\"><\/script>");
+		} else {
+			document.write("<link href='css/test-1024.css' rel='stylesheet' type='text/css'>");
+
+			document.writeln("<script type=\"text/javascript\" src=\"js/test-1024.js\"><\/script>");
+		}
+	</script>
+	<!--大屏-->
+	<script type="text/javascript">
+
+		function autoScroll(obj) {
+			$(obj).find("ul").animate({
+				marginTop: "-39px"
+			}, 500, function () {
+				$(this).css({ marginTop: "0px" }).find("li:first").appendTo(this);
+			})
+		}
+		$(function () {
+			setInterval('autoScroll(".maquee")', 2000);
+		})
+
+		document.getElementById("button1").addEventListener("click", function () {
+			window.location.href = "index.html"; // 跳转到另一个HTML页面
+		});
+
+		let names = "666666";
+		if (6 - names.length > 0) {
+			for (g = 0; g < 6 - names.length; g++) {
+				$(".main_top_middle_num_list" + (6 - g)).text('0')
+			}
+		}
+		for (var j = 0; j < names.length; j++) {
+			$(".main_top_middle_num_list" + (names.length - j)).text(names.substr(j, 1))
+		}
+
+		$(function () {
+			for (var i = 0; i < 50; i++) {
+				$('.air-relative').find('.gray').append('<span></span>');
+				$('.air-absolutely').find('.gray').append('<span></span>')
+			}
+			var pressureValRel = 0;//初始气压(相对)
+			var pressureValNowRel = 32;//当前气压（相对）
+			function airPreRel(now, old, par) {
+				if (now > old) {
+					par.find('.light').append('<span></span>');
+					pressureValRel++;
+				} else if (now < old) {
+					par.find('.light').children('span:last-child').remove();
+					pressureValRel--;
+				} else {
+					clearInterval(pressureRunRel);
+					return
+				}
+				$('.hpa-rel').text(pressureValRel * 2);
+			}
+			var pressureRunRel = setInterval(function () {
+				airPreRel(pressureValNowRel, pressureValRel, $('.air-relative'));
+			}, 50);
+
+			var pressureValAbs = 0;//初始气压(绝对)
+			var pressureValNowAbs = 21;//当前气压（绝对）
+			function airPreAbs(now, old, par) {
+				if (now > old) {
+					par.find('.light').append('<span></span>');
+					pressureValAbs++;
+				} else if (now < old) {
+					par.find('.light').children('span:last-child').remove();
+					pressureValAbs--;
+				} else {
+					clearInterval(pressureRunAbs);
+					return
+				}
+				$('.hpa-abs').text(pressureValAbs * 2);
+			}
+			var pressureRunAbs = setInterval(function () {
+				airPreAbs(pressureValNowAbs, pressureValAbs, $('.air-absolutely'));
+			}, 50);
+		});
+
+		$(document).ready(function () {
+			// 初始化状态：所有模块初始状态设为“工作”
+			var workStatuses = [true, true, true, true, true, true, true]; // 每个模块的工作状态，true表示“工作”
+
+			function updateStatus() {
+				// 遍历每个模块，切换工作和不工作状态
+				for (let i = 0; i < workStatuses.length; i++) {
+					// 获取模块工作和不工作灯的ID
+					let workId = '#work-status' + (i + 1);
+					let idleId = '#idle-status' + (i + 1);
+
+					if (workStatuses[i]) {
+						// 当前状态为工作，切换为不工作
+						$(workId).removeClass('active').addClass('idle');
+						$(idleId).removeClass('idle').addClass('active');
+					} else {
+						// 当前状态为不工作，切换为工作
+						$(workId).removeClass('idle').addClass('active');
+						$(idleId).removeClass('active').addClass('idle');
+					}
+
+					// 切换状态
+					workStatuses[i] = !workStatuses[i];
+				}
+			}
+
+			// 每两秒更新一次状态
+			setInterval(updateStatus, 2000);
+
+			// 初始化所有指示灯状态
+			updateStatus();
+		});
+	</script>
+</body>
+
+<style>
+	.zpsl-box {
+		position: relative;
+		left: 30px;
+		width: auto;
+		height: 155px;
+	}
+
+	.zpsl-box li {
+		width: 155px;
+		height: 155px;
+		float: left;
+		margin: 0 35px;
+		position: relative;
+	}
+
+
+	.zpsl-box li:nth-of-type(1):before {
+		width: 155px;
+		height: 155px;
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		background: url("./images/bqzlbg001.png") no-repeat;
+		background-size: 100% 100%;
+		animation: animation-rotate 4s linear infinite;
+	}
+
+	@keyframes animation-rotate {
+		0% {
+			transform: rotatez(360deg)
+		}
+
+		100% {
+			transform: rotatez(0deg)
+		}
+	}
+
+
+	.zpsl-box li span {
+		display: block;
+		width: 100%;
+		text-align: center;
+		color: #ffffff;
+		font-size: 14px;
+	}
+
+	.zpsl-box li span:nth-of-type(1) {
+		font-size: 18px;
+		font-weight: bold;
+		margin-top: 50px;
+	}
+
+	.zpsl-box li:nth-of-type(1) span:nth-of-type(1) {
+		color: #9DF9FC
+	}
+
+	.main_top_middle_num_title {
+		position: relative;
+		left: 100px;
+		float: left;
+		color: #0EFCFF;
+		font-size: 2.0vw;
+		line-height: 4.5vw;
+		width: 18%;
+		margin-top: .5vw;
+	}
+
+	.main_top_middle_num {
+		float: left;
+		position: relative;
+		left: 120px;
+		width: 55%;
+		height: 23%;
+		margin: .7% 0;
+		margin-top: 1.5%;
+	}
+
+	.main_top_middle_num_list {
+		position: relative;
+		float: left;
+		height: 100%;
+		width: 12%;
+		margin-left: 2.6%;
+		font-size: 2vw;
+		font-weight: bold;
+		color: #0EFCFF;
+		line-height: 240%;
+	}
+
+	.main_top_middle_num_list p {
+		text-align: center;
+	}
+
+	.main_top_middle_num_list:nth-child(1) {
+		margin-left: 0;
+	}
+
+	.main_top_middle_num_list img {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+	}
+
+	.completion {
+		box-sizing: border-box;
+		position: relative;
+	}
+
+	.completion-content {
+		width: 7rem;
+		height: 7rem;
+		display: flex;
+		background: url(./images/border.png) no-repeat center;
+		background-size: contain;
+		position: absolute;
+		left: 200px;
+		top: 100px;
+		transform: scale(1.6);
+	}
+
+	.completion-content .rate {
+		position: absolute;
+		box-sizing: border-box;
+		width: 4rem;
+		height: 4rem;
+		left: 17%;
+		top: 51%;
+		transform: translateY(-50%);
+		background: url(./images/cricle.png) no-repeat center;
+		background-size: contain;
+		animation: rotate1 5s ease infinite;
+	}
+
+	.completion-content .rate h5 {
+		text-align: center;
+		height: 50%;
+		width: 100%;
+		color: #fff;
+		display: table;
+	}
+
+	.completion-content .rate h5 span {
+		display: table-cell;
+		vertical-align: bottom;
+		font-size: 0.8rem;
+	}
+
+
+	.completion-content .rate p {
+		text-align: center;
+		height: 50%;
+		width: 100%;
+		color: #fff;
+		display: table;
+	}
+
+	.completion-content .rate p span {
+		display: table-cell;
+		vertical-align: middle;
+	}
+
+	@keyframes rotate1 {
+		0% {
+			transform: translateY(-50%) rotateY(0);
+		}
+
+		100% {
+			transform: translateY(-50%) rotateY(360deg);
+		}
+	}
+
+	.air {
+		height: 200px;
+		width: 60%;
+		position: relative;
+		left: 500px;
+		top: 50px;
+	}
+
+	.title {
+		background: url("./images/line.png") no-repeat top;
+		background-size: 90%;
+		height: 12%;
+		color: #ACA5A1;
+		font-size: 10px;
+		text-align: center;
+		padding-top: 1%;
+		font-weight: bold;
+	}
+
+	.air-relative,
+	.air-absolutely {
+		height: 20%;
+		position: relative;
+		left: 75px;
+	}
+
+	.air-relative {
+		margin: 2% 0 8% 0;
+	}
+
+	.air-val {
+		float: left;
+		color: white;
+		height: 100%;
+		line-height: 100%;
+		width: 15%;
+	}
+
+	.air-val div {
+		width: 60%;
+		height: 100%;
+		float: left;
+		margin-left: 1%;
+		margin-top: 4%;
+	}
+
+	.air-val div p {
+		margin: 0 5%;
+	}
+
+	.unit {
+		width: 15%;
+		float: right;
+		margin-right: 5%;
+		color: white;
+		height: 100%;
+		font-family: numfont;
+		line-height: 200%;
+		text-align: right;
+	}
+
+	.gray {
+		border-bottom: 1px solid #25201E;
+	}
+
+	.gray,
+	.light {
+		height: 100%;
+		width: 70%;
+		position: absolute;
+		left: 15%;
+	}
+
+	.gray span,
+	.light span {
+		display: block;
+		width: 2%;
+		height: 90%;
+		float: left;
+	}
+
+	.air-relative .gray span {
+		background: url("./images/bartop1.png") no-repeat;
+		background-size: auto 100%;
+	}
+
+	.air-relative .light span {
+		background: url("./images/bartop0.png") no-repeat;
+		background-size: auto 100%;
+	}
+
+	.air-absolutely .gray span {
+		background: url("./images/barfoot1.png") no-repeat;
+		background-size: auto 100%;
+	}
+
+	.air-absolutely .light span {
+		background: url("./images/barfoot0.png") no-repeat;
+		background-size: auto 100%;
+	}
+
+	.air-icon {
+		display: block;
+		width: 20%;
+		height: 90%;
+		float: left;
+
+	}
+
+	.air-relative .air-icon {
+		background: url("./images/bartop0.png") no-repeat;
+		background-size: auto 100%;
+	}
+
+	.air-absolutely .air-icon {
+		background: url("./images/barfoot0.png") no-repeat;
+		background-size: auto 100%;
+	}
+
+	.hpa-rel,
+	.hpa-abs {
+		font-size: 30px;
+	}
+
+	.air-val .hpa-nam {
+		margin-top: 20%;
+	}
+
+	.hpa-nam {
+		font-size: 12px;
+	}
+
+	.container {
+		display: flex;
+		position: relative;
+		top:50px;
+		left: 40px;
+		flex-direction: column;
+		align-items:flex-start;
+		justify-content:space-around;
+	}
+
+	.container-top {
+		display: flex;
+	}
+	
+	.container-mid{
+		display: flex;
+	}
+
+	.module {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		background-color: #09092c;
+		border-radius: 8px;
+		margin: 20px;
+		padding: 20px;
+		width: 300px;
+	}
+
+	.module h3 {
+		font-size: 18px;
+		color: #fff;
+	}
+
+	.work-status-light,.idle-status-light {
+		width: 30px;
+		height: 30px;
+		border-radius: 50%;
+		background-color: gray;
+		/* 初始状态为灰色 */
+		box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+		margin-left: 10px;
+	}
+
+	.work-status-light.active {
+		background-color: #1ff150;
+		/* 运行正常时为蓝绿色 */
+		box-shadow: 0 0 20px #1f8ef1;
+	}
+
+	.idle-status-light.active {
+		background-color: #f1381f;
+		/* 运行正常时为蓝绿色 */
+		box-shadow: 0 0 20px #1f8ef1;
+	}
+
+	.idle {
+		background-color: gray;
+		/* 不工作时为灰色 */
+		box-shadow: 0 0 20px gray;
+	}
+</style>
+
+</html>
