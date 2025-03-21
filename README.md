@@ -3,7 +3,7 @@
 
 三件套+Echarts
 
-后面会用websocket实现springboot服务器与前端实时数据交互
+websocket实现springboot服务器与前端实时数据交互
 
 
 ![image](https://github.com/user-attachments/assets/5e074373-8fe8-45c7-aefb-298839412bdf)
